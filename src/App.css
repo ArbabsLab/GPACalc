@@ -1,40 +1,102 @@
-.App{
+/* General app styles */
+.App {
+  font-family: Arial, sans-serif;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
 }
 
-.course-container{
-  width: 100%;
-  height: 65vh;
-  margin: 20px;
-}
-
-.btn-container{
-  margin: 20px;
+/* RowButtons component styling */
+.btn-container {
   display: flex;
-  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.inpt-course {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 200px;
+}
+
+.btn-add, .btn-clear {
+  padding: 10px 15px;
+  font-size: 16px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-add {
+  background-color: #28a745;
+}
+
+.btn-clear {
+  background-color: #dc3545;
+}
+
+.btn-add:hover {
+  background-color: #218838;
+}
+
+.btn-clear:hover {
+  background-color: #c82333;
+}
+
+/* Courselist component styling */
+.course-container {
   width: 100%;
-  height: 10vh;
-  justify-content: center;
+  margin-bottom: 20px;
 }
 
-.btn-container .btn-add{
-  width: 150px;
-  height: 75px;
+table {
+  width: 100%;
+  border-collapse: collapse;
 }
 
-.inpt-course{
-  width: 150px;
-  height: 75px;
+thead th {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  border: 1px solid #ddd;
 }
 
-.btn-container .btn-calc{
-  width: 150px;
-  height: 75px;
+tbody td {
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #ddd;
 }
-.btn-container .btn-clear{
-  background: red;
-  color:white;
-  width: 150px;
-  height: 75px;
+
+.grade, input[type="number"] {
+  padding: 5px;
+  width: 100px;
+}
+
+button {
+  padding: 8px 12px;
+  font-size: 14px;
+  color: white;
+  background-color: #ff6347;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #e55342;
+}
+
+/* Calculated GPA display */
+.course-container p {
+  font-weight: bold;
+  font-size: 18px;
+  color: #333;
+  margin-top: 10px;
 }

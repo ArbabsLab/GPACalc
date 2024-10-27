@@ -1,21 +1,16 @@
-import React, { useState } from 'react'
 
-export default function RowButtons() {
-    const [courses, setCourses] = useState([]);
-    const [coursename, setCoursename] = useState('');
 
-    function AddClass(){
-        let copy = [...courses];
-    }
+export default function RowButtons({ coursename, setCoursename, AddClass, ClearClass }) {
+   
+
+    
     
   return (
     <div className='btn-container'>
-        <form>
-            <input value={coursename} type='text' placeholder='Enter course name' onChange={(e) => setCoursename(e.target.value)}></input>
-            <button className='btn-add'>Add Course</button>
-        </form>
-        <button className='btn-calc'>Calculate</button>
-        <button className='btn-clear'>Clear</button>
+        
+        <input className='inpt-course' value={coursename} type='text' placeholder='Enter course name' onChange={(e) => setCoursename(e.target.value)}></input>
+        <button className='btn-add' onClick={AddClass}>Add Course</button>
+        <button className='btn-clear' onClick={ClearClass}>Clear</button>
     </div>
   )
 }
